@@ -173,7 +173,6 @@ add_llvm_component_library(LLVMAnalysis
   TargetParser
   )
 
-add_subdirectory(JVS)
 add_subdirectory(MyPass)
 
 include(CheckCXXSymbolExists)

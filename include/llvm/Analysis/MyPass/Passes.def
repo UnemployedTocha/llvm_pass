@@ -4,8 +4,6 @@
 #define FUNCTION_ANALYSIS(name, create_pass)
 #endif
 
-FUNCTION_ANALYSIS("jvs-fcmp-eq-analysis", jvs::FloatCompareAnalysis())
-
 FUNCTION_ANALYSIS("my-sum-pass-analysis", mypass::SumToSimplifyAnalysis())
 
 
@@ -17,14 +15,10 @@ FUNCTION_ANALYSIS("my-sum-pass-analysis", mypass::SumToSimplifyAnalysis())
 #define FUNCTION_PASS(name, create_pass)
 #endif
 
-FUNCTION_PASS("print<jvs-fcmp-eq-analysis>",
- jvs::FloatCompareAnalysisPrinter(dbgs()))
-
 FUNCTION_PASS("print<my-sum-pass-analysis>",
   mypass::SumAnalysisPrinter(dbgs()))
 
 
-FUNCTION_PASS("jvs-fcmp-eq-transform", jvs::FloatCompareTransform())
 FUNCTION_PASS("my-sum-pass-transform", mypass::SumToSimplifyTransform())
 
 #undef FUNCTION_PASS

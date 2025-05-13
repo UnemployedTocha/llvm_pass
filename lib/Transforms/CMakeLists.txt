@@ -10,5 +10,4 @@ add_subdirectory(Coroutines)
 add_subdirectory(CFGuard)
 add_subdirectory(HipStdPar)
 
-add_subdirectory(JVS)
 add_subdirectory(MyPass)
